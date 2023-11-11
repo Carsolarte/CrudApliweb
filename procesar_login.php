@@ -9,7 +9,7 @@
 
         if ($submittedUsername == $_SESSION["username"] && $submittedPassword == $_SESSION["password"]) {
             // Si la autenticación es exitosa, redirige a visualizarDepto.php después de 2 segundos
-            echo "<script>setTimeout(function(){ window.location.href = 'visualizarDepto.php'; }, 1000);</script>";
+            header("Location: visualizarDepto.php");
             exit();
         } else {
             // Si la autenticación falla, puedes redirigir a una página de error o volver al formulario de inicio de sesión

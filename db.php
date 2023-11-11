@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 $conexion= mysqli_connect(
     'localhost',
     'root',
@@ -9,6 +7,8 @@ $conexion= mysqli_connect(
     'employees'
 );
 if(isset($conexion)){
-    //echo 'BD conectada';
+    echo '<script>';
+    echo 'console.log("bd conectada!");';
+    echo '</script>';
 }
 ?>
