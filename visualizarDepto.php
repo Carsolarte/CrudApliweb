@@ -1,6 +1,7 @@
 <?php
 // inicio.php
 
+
 session_start();
 
 // Verificar si el usuario está autenticado (si la sesión tiene el nombre de usuario)
@@ -23,7 +24,7 @@ if (!isset($_SESSION['username'])) {
         <div class="col-md-6">
             <div class="card">
                 <div class="card-header text-center">
-                    <h3>Bienvenido, <?php echo $_SESSION['username']; ?>!</h3>
+                    <h3>Bienvenido:, <?php echo $_SESSION['username']; ?>!</h3>
                 </div>
                 <div class="card-body">
                     <!-- Contenido de la página de inicio -->
