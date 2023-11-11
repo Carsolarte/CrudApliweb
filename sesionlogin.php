@@ -5,7 +5,6 @@ session_start();
 
 // Incluir el archivo de conexión a la base de datos (db.php)
 include("db.php");
-
 // Obtener los datos del formulario
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -17,7 +16,7 @@ if ($username === 'usuario_demo' && $password === 'contraseña_demo') {
     $_SESSION['username'] = $username;
 
     // Redirigir a la página de inicio o a donde desees después del inicio de sesión
-    header('Location: inicio.php');
+    header('Location: VisualizarDepto.php');
     exit();
 } else {
     // Autenticación fallida, redirigir a la página de inicio de sesión con un mensaje de error
