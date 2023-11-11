@@ -1,27 +1,3 @@
-<?php
-include("db.php");
-?>
-<?php
-// Verificar si se ha enviado el formulario
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Obtener el nombre de usuario y la contraseña del formulario
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-
-    // Realizar la verificación de nombre de usuario y contraseña (deberías hacer esto de manera segura, por ejemplo, utilizando consultas preparadas)
-    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-    $result = mysqli_query($con, $query);
-
-    if ($result && mysqli_num_rows($result) > 0) {
-        // Usuario autenticado correctamente
-        // Establecer una cookie con el nombre de usuario
-        setcookie("username", $username, time() + 3600, "/"); // La cookie expirará en 1 hora (3600 segundos)
-    } else {
-        // Usuario no autenticado
-        echo "Error de inicio de sesión";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,6 +8,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <?php
+    include("db.php");
+    include("sesion.php");
+    ?>
+
     <style>
         .img-fluid {
             max-width: 50px;
