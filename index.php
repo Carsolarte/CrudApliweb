@@ -19,6 +19,16 @@
             height: auto;
 
         }
+        .card .mb-3 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-3{
+            margin: 1.5rem;
+        }
+        .card .text-center button {
+            margin-bottom: 1rem;
+        }
     </style>
 </head>
 
