@@ -1,4 +1,4 @@
 <?php
-    $_SESSION["username"] = "admin";
-    $_SESSION["password"] = "admin";
+    $_SESSION["username"] = "Carsolarte";
+    $_SESSION["password"] = "caro123";
 ?>

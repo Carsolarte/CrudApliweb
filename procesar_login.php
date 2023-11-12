@@ -4,10 +4,11 @@
     // Verifica si se enviaron datos mediante POST
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Obtiene los datos del formulario
-        $submittedUsername = $_POST["username"];
-        $submittedPassword = $_POST["password"];
+        $Username = $_POST["username"];
+        $Password = $_POST["password"];
 
-        if ($submittedUsername == $_SESSION["username"] && $submittedPassword == $_SESSION["password"]) {
+        if ($Username == $_SESSION["username"] && $Password == $_SESSION["password"]) {
+            setcookie("Usuario", $Username, time() + (86400 * 30), "/");
             // Si la autenticación es exitosa, redirige a visualizarDepto.php después de 2 segundos
             header("Location: visualizarDepto.php");
             exit();
