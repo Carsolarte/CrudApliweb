@@ -9,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($Username == $_SESSION["username"] && $Password == $_SESSION["password"]) {
         setcookie("Usuario", $Username, time() + (86400 * 30), "/");
-        // Si la autenticación es exitosa, redirige a visualizarDepto.php después de 2 segundos
         header("Location: visualizarDepto.php");
         exit();
     } else {
@@ -20,7 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 } else {
-    // Si no se enviaron datos mediante POST, redirige a la página de inicio de sesión
     header("Location: index.php");
     exit();
 }

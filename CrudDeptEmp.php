@@ -40,7 +40,7 @@ if (isset($_POST['bt_update_dep_emp'])) {
   echo "console.log('fechaActual:', '$fechaActual');";
   echo "</script>";
   if ($idDepto != '' and $idDepto != null and $idemp != '' and $idemp != null) {
-    // Actualiza la fecha to_date en la tabla dept_emp
+    
     $queryUpdateDeptEmp = "UPDATE dept_emp SET to_date = '$fechaActual' WHERE emp_no = '$idemp' AND dept_no = '$idDepto'";
     $resultUpdateDeptEmp = mysqli_query($conexion, $queryUpdateDeptEmp);
     if (!$resultUpdateDeptEmp) {
