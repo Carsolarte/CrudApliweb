@@ -2,7 +2,10 @@
 include('includes/header.php');
 include("db.php");
 ?>
-
+<div class="container">
+  
+<h1>Sistema De Departamento De Empleados</h1>
+</div>
 <div class="container p-4">
   <div class="row">
     <div class="col-md-4 ">
@@ -21,16 +24,16 @@ include("db.php");
             <input type="text" name="dept_no" class="form-control" placeholder="N° Departamneto" autofocus>
           </div>
           <div class="form-group mb-3">
-            <input name="text" name="Emp_np" class="form-control" placeholder="N° Empleado" autofocus>
+            <input type="text" name="emp_np" class="form-control" placeholder="N° Empleado" autofocus>
           </div>
           <div class="d-grid">
-            <input type="submit" name="Guardar" class="btn btn-success" value="Guardar">
+            <input name="bt_guardar_dep_emp" type="submit" class="btn btn-success" value="Guardar">
           </div>
         </form>
       </div>
     </div>
     <div class="col">
-      3 of 3
+      <p></p>
     </div>
   </div>
 </div>
@@ -65,8 +68,6 @@ include("db.php");
         </tbody>
       </table>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-
-</html>
+<?php
+include('includes/footer.php');
+?>

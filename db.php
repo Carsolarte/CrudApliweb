@@ -7,8 +7,8 @@ $conexion= mysqli_connect(
     'employees'
 );
 if(isset($conexion)){
-    echo '<script>';
-    echo 'console.log("bd conectada!");';
-    echo '</script>';
+    //echo '<script>';
+    //echo 'console.log("bd conectada!");';
+    //echo '</script>';
 }
 ?>
